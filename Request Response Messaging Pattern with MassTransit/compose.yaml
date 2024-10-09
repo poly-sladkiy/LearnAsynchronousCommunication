@@ -1,0 +1,21 @@
+services:
+    producer:
+        build: 
+            context: ./Request Response Newsletter.Api/
+        container_name: producer
+        ports:
+            - 8080:8080
+        depends_on:
+            - rabbitmq
+
+    consumer:
+        build:
+            context: ./Newsletter.Reporting.Api/
+        container_name: consumer
+        depends_on:
+            - rabbitmq
+
+    rabbitmq:
+        image: rabbitmq:management
+        ports:
+            - 15672:15672

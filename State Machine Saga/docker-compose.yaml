@@ -1,0 +1,11 @@
+﻿services: 
+  saga.newsletter.api:
+    build:
+      context: ./Saga.Newsletter.Api
+    ports:
+      - 8080:8080
+ 
+  saga.rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - 15672:15672

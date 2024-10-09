@@ -1,0 +1,17 @@
+services:
+    producer:
+        build: 
+            context: ./Habr Simple Fanout Web Api Producer/
+        container_name: producer
+        ports:
+            - 8080:8080
+
+    consumer:
+        build:
+            context: ./Habr Simple Fanout Console Consumer/
+        container_name: consumer
+
+    rabbitmq:
+        image: rabbitmq:management
+        ports:
+            - 15672:15672

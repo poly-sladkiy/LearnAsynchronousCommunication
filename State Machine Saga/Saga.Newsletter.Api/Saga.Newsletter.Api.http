@@ -1,0 +1,6 @@
+@Saga.Newsletter.Api_HostAddress = http://localhost:5023
+
+GET {{Saga.Newsletter.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Habr Simple Fanout Console Consumer": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

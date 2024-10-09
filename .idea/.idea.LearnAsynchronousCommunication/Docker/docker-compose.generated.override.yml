@@ -1,0 +1,23 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  saga.newsletter.api:
+    build:
+      context: "C:\\Users\\k.ignakov\\source\\repos\\LearnAsynchronousCommunication\\\
+        State Machine Saga\\Saga.Newsletter.Api"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Saga.Newsletter.Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "saga.newsletter.api:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\k.ignakov\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\k.ignakov\\source\\repos\\LearnAsynchronousCommunication\\State\
+      \ Machine Saga\\Saga.Newsletter.Api:/app:rw"
+    - "C:\\Users\\k.ignakov\\source\\repos\\LearnAsynchronousCommunication:/src:rw"
+    working_dir: "/app"

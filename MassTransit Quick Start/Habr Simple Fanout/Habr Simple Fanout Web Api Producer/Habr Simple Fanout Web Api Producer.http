@@ -1,0 +1,6 @@
+@Habr_Simple_Fanout_Web_Api_Producer_HostAddress = http://localhost:5001
+
+GET {{Habr_Simple_Fanout_Web_Api_Producer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
