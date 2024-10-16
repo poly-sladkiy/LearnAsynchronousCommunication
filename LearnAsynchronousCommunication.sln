@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
+# 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Habr Simple Fanout", "Habr Simple Fanout", "{2541C16F-2565-411F-AC5D-AE00FE96BCE1}"
@@ -28,17 +28,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Request Response Messaging 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Newsletter.Api", "Request Response Messaging Pattern with MassTransit\Request Response Newsletter.Api\Newsletter.Api.csproj", "{F4E51A3D-37D2-49EB-8327-B0D3A700730A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Request Response Messaging Pattern with MassTransit\Contracts\Contracts.csproj", "{D8E0047C-13B6-4110-82A8-3C5BC5725A0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Request Response Messaging Pattern with MassTransit\Contracts\Contracts.csproj", "{D8E0047C-13B6-4110-82A8-3C5BC5725A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newsletter.Reporting.Api", "Request Response Messaging Pattern with MassTransit\Newsletter.Reporting.Api\Newsletter.Reporting.Api.csproj", "{83AF0428-CDDE-4697-8C24-5DD624435BE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Newsletter.Reporting.Api", "Request Response Messaging Pattern with MassTransit\Newsletter.Reporting.Api\Newsletter.Reporting.Api.csproj", "{83AF0428-CDDE-4697-8C24-5DD624435BE8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "State Machine Saga", "State Machine Saga", "{901B326F-4489-411A-8DB5-89CB52AAFB9B}"
 	ProjectSection(SolutionItems) = preProject
-		State Machine Saga\README.md = State Machine Saga\README.md
 		State Machine Saga\docker-compose.yaml = State Machine Saga\docker-compose.yaml
+		State Machine Saga\README.md = State Machine Saga\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.Newsletter.Api", "State Machine Saga\Saga.Newsletter.Api\Saga.Newsletter.Api.csproj", "{B237E0D0-7AA6-45AC-B37A-0459B167DDC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.Newsletter.Api", "State Machine Saga\Saga.Newsletter.Api\Saga.Newsletter.Api.csproj", "{B237E0D0-7AA6-45AC-B37A-0459B167DDC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactional Outbox", "Transactional Outbox", "{C84910B3-606B-4761-98F8-8DD34B940201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionalOutboxMassTransit", "TransactionalOutbox\TransactionalOutboxMassTransit\TransactionalOutboxMassTransit.csproj", "{A114141C-B967-4535-B9D3-6AD24AFE1193}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "TransactionalOutbox\Contracts\Contracts.csproj", "{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +76,14 @@ Global
 		{B237E0D0-7AA6-45AC-B37A-0459B167DDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B237E0D0-7AA6-45AC-B37A-0459B167DDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B237E0D0-7AA6-45AC-B37A-0459B167DDC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A114141C-B967-4535-B9D3-6AD24AFE1193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A114141C-B967-4535-B9D3-6AD24AFE1193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A114141C-B967-4535-B9D3-6AD24AFE1193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A114141C-B967-4535-B9D3-6AD24AFE1193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +95,8 @@ Global
 		{D8E0047C-13B6-4110-82A8-3C5BC5725A0F} = {00E5742F-B623-42E5-BBB3-F596E39F8501}
 		{83AF0428-CDDE-4697-8C24-5DD624435BE8} = {00E5742F-B623-42E5-BBB3-F596E39F8501}
 		{B237E0D0-7AA6-45AC-B37A-0459B167DDC6} = {901B326F-4489-411A-8DB5-89CB52AAFB9B}
+		{A114141C-B967-4535-B9D3-6AD24AFE1193} = {C84910B3-606B-4761-98F8-8DD34B940201}
+		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180} = {C84910B3-606B-4761-98F8-8DD34B940201}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B409608-5B79-4956-9D5F-E2784D8F028C}
