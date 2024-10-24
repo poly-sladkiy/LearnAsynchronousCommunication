@@ -1,6 +1,9 @@
+using Contracts.Models;
 using MassTransit;
+using MassTransit.Configuration;
 using Microsoft.EntityFrameworkCore;
 using TransactionalOutboxMassTransit;
+using TransactionalOutboxMassTransit.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,30 +16,37 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<OutboxDbContext>(options =>
 {
-	options.UseNpgsql();
+	options.UseNpgsql("Host=postgresql;User ID=postgres;Password=password;Database=outbox;Port=5432;");
 });
 
 builder.Services.AddMassTransit(config =>
 {
-	config.UsingRabbitMq((context, cfg) =>
+	config.SetKebabCaseEndpointNameFormatter();
+	
+	config.AddConsumer<ProductCreatedConsumer>();
+	
+	config.UsingRabbitMq();
+	
+	config.AddEntityFrameworkOutbox<OutboxDbContext>(options =>
 	{
-		cfg.Host("rabbit", "/", h =>
-		{
-			h.Username("guest");
-			h.Password("guest");
-		});
-
+		options.UsePostgres();
+		options.UseBusOutbox();
 	});
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+	var db = scope.ServiceProvider.GetService<OutboxDbContext>();
+	
+	if (db.Database.GetPendingMigrations().Any())
+		db.Database.Migrate();
 }
+
+// Configure the HTTP request pipeline.
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Habr Simple Fanout", "Habr Simple Fanout", "{2541C16F-2565-411F-AC5D-AE00FE96BCE1}"
 	ProjectSection(SolutionItems) = preProject
 		MassTransit Quick Start\Habr Simple Fanout\.dockerignore = MassTransit Quick Start\Habr Simple Fanout\.dockerignore
-		MassTransit Quick Start\Habr Simple Fanout\compose.yaml = MassTransit Quick Start\Habr Simple Fanout\compose.yaml
 		MassTransit Quick Start\Habr Simple Fanout\README.md = MassTransit Quick Start\Habr Simple Fanout\README.md
 	EndProjectSection
 EndProject
@@ -17,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1CF93036-B686-4E9C-8DE4-F96161CFE058}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Request Response Messaging Pattern with MassTransit", "Request Response Messaging Pattern with MassTransit", "{00E5742F-B623-42E5-BBB3-F596E39F8501}"
@@ -45,6 +45,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionalOutboxMassTransit", "TransactionalOutbox\TransactionalOutboxMassTransit\TransactionalOutboxMassTransit.csproj", "{A114141C-B967-4535-B9D3-6AD24AFE1193}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "TransactionalOutbox\Contracts\Contracts.csproj", "{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example MassTransit Pub Sub", "Example MassTransit Pub Sub", "{A18CE4E8-583E-474A-B8FE-3469A9410F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit Simple Publisher", "Example MassTransit Pub Sub\MassTransit Simple Publisher\MassTransit Simple Publisher.csproj", "{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit Pub Sub Contracts", "Example MassTransit Pub Sub\MassTransit Pub Sub Contracts\MassTransit Pub Sub Contracts.csproj", "{6855843D-8665-4B20-B2FB-CA43EBEBF98F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit Simple Consumer", "Example MassTransit Pub Sub\MassTransit Simple Consumer\MassTransit Simple Consumer.csproj", "{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +92,18 @@ Global
 		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6855843D-8665-4B20-B2FB-CA43EBEBF98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6855843D-8665-4B20-B2FB-CA43EBEBF98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6855843D-8665-4B20-B2FB-CA43EBEBF98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6855843D-8665-4B20-B2FB-CA43EBEBF98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +117,9 @@ Global
 		{B237E0D0-7AA6-45AC-B37A-0459B167DDC6} = {901B326F-4489-411A-8DB5-89CB52AAFB9B}
 		{A114141C-B967-4535-B9D3-6AD24AFE1193} = {C84910B3-606B-4761-98F8-8DD34B940201}
 		{1E81D627-CE58-4172-AFEA-2F3C0FA0D180} = {C84910B3-606B-4761-98F8-8DD34B940201}
+		{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
+		{6855843D-8665-4B20-B2FB-CA43EBEBF98F} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
+		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B409608-5B79-4956-9D5F-E2784D8F028C}
