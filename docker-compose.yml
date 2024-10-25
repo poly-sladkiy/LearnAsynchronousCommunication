@@ -43,3 +43,13 @@
       - 8082:8890
     environment:
       - ASPNETCORE_HTTP_PORTS=8890
+
+  masstransit_webapi_consumermasstransitwebapiconsumer:
+    image: masstransit_webapi_consumermasstransitwebapiconsumer
+    build:
+      context: .
+      dockerfile: Example MassTransit Pub Sub/MassTransit WebApi Consumer/Dockerfile
+    ports:
+      - 8083:8890
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8890

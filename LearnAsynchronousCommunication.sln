@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit Pub Sub Contrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit Simple Consumer", "Example MassTransit Pub Sub\MassTransit Simple Consumer\MassTransit Simple Consumer.csproj", "{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit WebApi Consumer", "Example MassTransit Pub Sub\MassTransit WebApi Consumer\MassTransit WebApi Consumer.csproj", "{3032E67C-6C33-4E98-BB3B-E5A3233B7B43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3032E67C-6C33-4E98-BB3B-E5A3233B7B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3032E67C-6C33-4E98-BB3B-E5A3233B7B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3032E67C-6C33-4E98-BB3B-E5A3233B7B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3032E67C-6C33-4E98-BB3B-E5A3233B7B43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{2142BC99-753A-4BAA-9D01-0CAB85EEEA0E} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
 		{6855843D-8665-4B20-B2FB-CA43EBEBF98F} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
 		{2A40A1FC-1A40-4BAA-9BD0-6013D327409C} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
+		{3032E67C-6C33-4E98-BB3B-E5A3233B7B43} = {A18CE4E8-583E-474A-B8FE-3469A9410F66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B409608-5B79-4956-9D5F-E2784D8F028C}
